@@ -1,0 +1,338 @@
+
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+  
+  
+}
+
+/*VARIABLES */
+:root{
+    --clr-background: #23252b;
+    --clr-primary:#D3852F;
+    --clr-white:#ffffff;
+    --clr-gray:#353434;
+    --clr-brown:#522C04 ;
+    --font-size:16px;
+    --border-radius:0.2em;
+}
+
+p{
+color:var(--clr-brown);
+font-size: 1.1em;
+}
+
+
+body{
+    margin: 0;
+    font-size: var(--font-size);
+    color:var(--clr-gray);
+    overflow-x: hidden; /*para evitar el desbordamiento del eje horizontal y así no aparezca la barrita de scroll*/
+}
+
+
+/*BARRA DE NAVEGACIÓN Y TITULO*/
+header{
+width: 100vw;
+    background-color: var(--clr-background);
+    margin: 0;
+}
+
+
+/*clase dentro del nav*/
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*primer subclase dentro del div del título*/
+.principal{
+display: flex;
+align-items: center;
+text-align: center;
+}
+
+
+.principal>img{
+    margin-left: 0.5em;
+}
+
+h1{
+    margin-left: 0.5em;
+    color: var(--clr-primary);
+}
+
+/*termina la subclase anterior, y empezamos a modificar el listado-menu*/
+ul{
+list-style: none; /*le saca el puntito que tiene por default el listado*/
+display: flex;
+justify-content: flex-end;
+align-items: center; /*centra el contenido en relación a la caja*/
+margin: 0;
+padding: 0;
+}
+
+
+/*Organiza el listado del nav y los separa*/
+ul li{
+    padding-right: 3em;
+    font-weight: bold;
+
+}
+ul li a:hover {
+    background-color: var(--clr-gray);
+}
+
+
+/*especificamos que no queremos que se quede en violeta cuadno clickeamos el link del nav*/
+a:link, a:visited, a:active{
+    text-decoration:none;
+    color: var(--clr-white);
+  
+}
+
+main{
+    margin: 2em;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1 em;
+    padding: 2em;
+  
+}
+/* PRIMERA PARTE DEL MAIN Y SEARCH */
+
+.primera-parte{
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    gap: 1em
+    ;
+
+}
+#titulardelconte{
+    display: flex;
+    align-items: flex-start;
+    border-top: none;
+    flex-grow: 2;
+
+;
+    
+}
+#search{
+    background-color:var(--clr-white);
+    border-radius: var(--border-radius);
+    width: 15em;
+    height: 1.5em;
+    padding: auto;
+    display: flex;
+    align-items: flex-end;
+    color: var(--clr-gray);
+    border-top:none;
+}
+
+img.logo{
+    width: 60px;
+}
+
+h2{
+    font-size: 2em;
+    
+}
+
+
+
+/* DISEÑO DE LA VISIÓN DE LOS MANGAS*/
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:1.5em;
+    padding-left: 3em;
+
+}
+
+.mangas{
+width: 270px;
+height: 410px;
+}
+
+.price{
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 0;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+h4{
+    font-size: 1.2em;
+    margin-bottom: 0.4em ;
+    margin-top: 0.5em;
+
+}
+/* ACA DETERMINO EL BORDER TOP PARA LAS SECTIONS*/
+section{
+    background-color: var(--clr-white);
+    border-radius: var(--border-radius);
+    padding: 1em;
+    border-top: 4px solid var(--clr-background);
+    
+}
+section:hover{
+    border-top-color: var(--clr-primary);
+}
+
+
+
+
+h5{
+    margin-bottom: 1em ;
+    margin-top: 0.5em;
+font-size:1em;
+}
+
+
+
+/*CATALOGUE SECTION*/
+
+.catalogo{
+    margin: 0;
+border-color: var(--clr-primary);
+padding: 2em;
+padding-left: 5em;
+font-size: 1.1em;
+
+}
+
+table{
+    caption-side: bottom;
+    border-collapse: separate;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    width: 50em;
+    padding-top: 1em;
+
+}
+
+ td{
+   
+    padding: 0.5em;
+border-style: groove;
+    
+}
+
+th{
+padding: 2.5em;
+border-style: groove;
+}
+
+/*title of the section*/
+.bienvenida{
+    font-size: 2em;
+    color: var(--clr-gray);
+    
+}
+
+
+.subtitulo{
+    color: var(--clr-primary);
+}
+
+
+
+
+/*SECTION VIDEOS */
+.todovideo{
+    margin: 2em;
+}
+.ytb-videos{
+    display: flex;
+    align-items: center;
+    padding-bottom:2em;
+    padding-top: 0.2em;
+
+}
+iframe{
+    padding: 1em;
+}
+.trailers{
+padding-left: 4.5em;
+    font-size: 2em;
+
+   
+}
+
+/*COMUNICATION SECTION*/
+.comunicacion{
+    text-align: center;
+    padding-top: 1em;
+    font-size: 3em;
+    border-color: var(--clr-primary);
+}
+.comunicacion>p{
+    color: var(--clr-gray);
+}
+p>.email{
+    color: var(--clr-gray);
+}
+p>.email{
+   
+    background-color: var(--clr-primary);
+}
+p>.email:hover{
+    background-color:var(--clr-brown);
+    color: var(--clr-white);
+}
+
+
+/*FOOTER SECTION*/
+
+footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-background);
+    margin-top: 1em;
+    
+}
+.marca{
+    letter-spacing: 2px;
+    font-weight: solid;
+    font-size: 1.1em;
+    color: var(--clr-white);
+    padding-right: 1em ;
+}
+.marca2{
+    letter-spacing: 2px;
+    color: var(--clr-primary);
+}
+
+
+
+/* --MENU RESPONSIVO MOBILE--
+
+ .menu li h1{
+    display: block;
+    padding: 10px 10px;
+}
+
+.menu li:hover{
+    background: rgb(0,0,0,0.3);
+}
+header label{
+  display: none;
+    width: 30em;
+    height: 30em;
+    padding: 10px;
+    border-right: 1px solid;
+}
+
+
+ header label:hover{
+cursor: pointer;
+background: rgb(0,0,0,0.3);
+
+ }
+ #boton-menu{
+    display: none;}
+  */
